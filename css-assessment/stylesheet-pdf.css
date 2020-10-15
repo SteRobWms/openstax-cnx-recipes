@@ -1,0 +1,221 @@
+html {
+    color: #000000;
+    font-family: 'IBM Plex Sans', serif;
+    font-size: 12px;
+}
+
+div[data-type="chapter"]{
+    position: static;
+    width: 8.15in;
+    margin-top:-1rem;
+}
+
+/* ## Chapter Title */
+h1[data-type="document-title"] .os-part-text, h1[data-type="document-title"] .os-number {
+    color: #0074BC;
+    font-family: "Muli";
+    font-size: 2rem;
+    font-weight: bolder;
+    letter-spacing: 0.1rem;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+    display: inline;
+}
+
+/* `Chapter 1`  Title Text: */
+h1[data-type="document-title"] .os-number {
+    margin-right: 8px;
+}
+
+/* `The Study of Life` Title Text: */ 
+h1[data-type="document-title"] .os-text {
+    font-size: 3.5rem;
+    line-height: 3rem;
+    font-weight: lighter;
+    display: block;
+}
+
+
+/*  ## Splash Image */
+
+
+/*Container:*/
+div.os-figure.has-splash {
+    margin: 0 0 2rem 0;
+}
+
+
+/* Left color block:*/
+figure.splash {
+    position: relative;
+    width: 8.65in;
+    left: -1in;
+    margin: 0 0 0 0;
+    background-color: #0074BC;
+}
+
+/* Splash Image: */
+figure.splash span {
+    display: block;
+    height: 419.875px;
+}
+
+figure.splash img{
+    width: 8.15in;
+    margin: 0 0 0 1in
+}
+
+/* Caption: */
+div.os-caption-container{
+    background-color: #EEEAE0;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    padding-left: .75in;
+    width: 8.15in;
+    position: relative;
+    left: -.75in;
+}
+
+div.os-caption-container span{
+    display: inline-block;
+    max-width: 75%;
+}
+
+/* `Figure 1.1` Text:*/
+/* Just could not figure out how to easily get the red text both in line with other text, but also with a total max width. I assume you all don't want me to change any HTML, but that would really be the easiest way there... */
+div.os-caption-container .os-title-label, div.os-caption-container .os-number {
+    color: #C31427;
+    font-family: "Muli";
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    top: -1.25em;
+}
+
+/*## Introduction Paragraph */
+/* Paragraph:*/
+/* I went with a flex box to easily reverse the element display order. */
+div.intro-body{
+    display:flex;
+    flex-direction:row-reverse;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+div.intro-body .intro-text{
+    max-width: 70%;
+    align-self: flex-start;
+}
+div.intro-body .intro-text p {
+    margin-bottom: 0.7rem;
+    display: inline;
+}
+
+/* `Introduction` title text:*/
+div.intro-body .intro-text h2{
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    display: inline;
+    padding-right: .5rem;
+}
+
+
+/* Chapter Outline:*/
+div.intro-body .os-chapter-outline{
+    background-color: #0074BC;
+    font-size: 1rem;
+    font-weight: 500;
+    width: 2.15in;
+    margin-right: -1.2rem;
+    margin-left: 1.5rem;
+    padding: 1.5rem 2rem 1.5rem 1.5rem;
+    color: white;
+    line-height: 1.5rem;
+}
+
+/* `Chapter Outline` Title Text: */
+div.intro-body .os-chapter-outline h3 {
+    border-bottom: 1px white solid;
+    color: white;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    padding: 0 0 .5rem .1rem;
+    margin-top: 0;
+}
+
+div.intro-body .os-chapter-outline a{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+}
+
+div.intro-body .os-chapter-outline span{
+    color:white;
+}
+
+div.intro-body .os-chapter-outline span.os-divider{
+    display:inline-block;
+    width: .5rem;
+}
+
+
+
+
+
+
+
+
+
+/*## Learning Objectives */
+
+/* Section Title `1.1 The Science of Biology`*/
+[data-type="page"].chapter-content-module h2{
+    color: #0074BC;
+    font-family: "Muli";
+    font-size: 1.7rem;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+
+/* I took a little personal interpretation below based on the images. 
+
+The instructions skipped over the "Learning Objectives", but I figured it meant to keep "Learning Objectives" mostly consistent, then match the subtitle style below to it, 
+
+not to the "1.1 The Science of Biology" portion above */
+[data-type="page"].chapter-content-module h3{
+    color: #0074BC;
+    font-family:"Muli";
+    margin: 0;
+    font-weight: bolder;
+}
+/* Subtile `By the end of this section-` 
+- same as section title but italic  */
+[data-type="page"].chapter-content-module p{
+    color: #0074BC;
+    font-size: 1.17rem;
+    margin: 0;
+    font-family: "Muli";
+    font-style: italic;
+}
+
+
+/* Unordered List */
+[data-type="page"].chapter-content-module ul{
+    font-family: "Muli";
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding-left: 20px;
+    margin-top: 6px;
+    list-style: none;
+}
+
+/* Also, yay for colored bullets! */
+[data-type="page"].chapter-content-module ul li::before {
+        content: "\2022";
+        color:#0074BC;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+}
